@@ -46,11 +46,14 @@
     <script src="../res/mui/js/mui.min.js"></script>
     <script src='../../assets/jquery/jquery.min.js'></script>
     <script>
-        console.log(123);
         $('.btn_login').on('click', function () {
             $.ajax({
                 url: '/api/user/login',
                 type: 'post',
+                // xhrFields: {
+                //     //让浏览器将cookie传到后端
+                //     withCredentials: true
+                // },
                 data: {
                     username: $('input[name="name"]').val(),
                     password: $('input[name="pass"]').val()

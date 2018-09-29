@@ -58,6 +58,7 @@
     <script src="../res/mui/js/mui.min.js"></script>
     <script src="../js/jquery.min.js"></script>
     <script>
+        console.log('index');
         $.ajax({
             //检测用户是否登录
             url: '/api/user/queryUserMessage',
@@ -67,9 +68,9 @@
             },
             success: function (info) {
                 console.log(info);
-                if (info.error) {
-                    location.href = './login.html'
-                }
+                // if (info.error) {
+                //     location.href = './login.html'
+                // }
             }
         })
     </script>
